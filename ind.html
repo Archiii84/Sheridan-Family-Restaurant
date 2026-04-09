@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheridan Family Restaurant - Since 1989</title>
+    <meta name="description" content="Family-owned restaurant serving delicious breakfast, lunch, and dinner since 1989. Located in Amherst, NY.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Sheridan Family Restaurant</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#specials">Daily Specials</a></li>
+                <li><a href="#hours">Hours</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welcome to Sheridan Family Restaurant</h1>
+        <p class="tagline">Where Tradition Meets Flavor</p>
+        <p class="since">Proudly Serving the Community Since 1989</p>
+        <a href="#menu" class="btn">View Our Menu</a>
+        <a href="tel:+17168393011" class="btn">Call to Order</a>
+    </section>
+
+    <section id="about">
+        <h2>Our Story</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🥞</div>
+                <h3>Fresh Daily</h3>
+                <p>We prepare everything fresh daily using quality ingredients and time-honored recipes.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                <h3>Family Owned</h3>
+                <p>A family business serving families for over 35 years. You're not just a customer, you're family.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Local Favorite</h3>
+                <p>A beloved neighborhood diner where good food and warm hospitality come together.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEER AND WINE ANNOUNCEMENT -->
+    <div class="special-notice">
+        🍷 NOW SERVING BEER & WINE! 🍺
+    </div>
+
+    <!-- DAILY SPECIALS SECTION -->
+    <section id="specials">
+        <h2>Today's Specials</h2>
+        <div class="today-info">
+            <p id="current-day">Loading...</p>
+        </div>
+        
+        <div class="specials-container">
+            <!-- Breakfast Special - 3 items -->
+            <div class="special-card" onclick="openSpecialModal('breakfast')">
+                <h3>Breakfast Specials</h3>
+                <div id="breakfast-preview" class="special-content">
+                    <p>Click to view all breakfast specials</p>
+                </div>
+                <button class="view-btn">View All Specials</button>
+            </div>
+
+            <!-- Dinner Special -->
+            <div class="special-card" onclick="openSpecialModal('dinner')">
+                <h3>Dinner Specials</h3>
+                <div id="dinner-preview" class="special-content">
+                    <p>Click to view all dinner specials</p>
+                </div>
+                <button class="view-btn">View All Specials</button>
+            </div>
+
+            <!-- Soups of the Day - 2 soups -->
+            <div class="special-card" onclick="openSpecialModal('soup')">
+                <h3>Soups of the Day </h3>
+                <div id="soup-preview" class="special-content">
+                    <p>Loading today's soups...</p>
+                </div>
+                
+            </div>
+
+            <!-- Vegetables of the Day - 2 veggies -->
+            <div class="special-card" onclick="openSpecialModal('vegetables')">
+                <h3>Vegetables of the Day </h3>
+                <div id="veggie-preview" class="special-content">
+                    <p>Loading today's vegetables...</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL POPUP FOR SPECIALS -->
+    <div id="specialModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeSpecialModal()">&times;</span>
+            <h2 id="modal-title">Today's Specials</h2>
+            <div id="modal-day" class="modal-day"></div>
+            <div id="modal-body" class="modal-body">
+                <!-- Content will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MENU SECTION -->
+    <section id="menu">
+        <h2>Our Complete Menu</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">Click any category to view items</p>
+        
+        <!-- BREAKFAST -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('breakfast')">
+                <span> Breakfast (Served All Day)</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="breakfast" class="accordion-content">
+                <div class="menu-section">  
+                    <h3>Breakfast Classics</h3>
+                    <p class="section-note">Add Onion to Home Fries 0.79, Add Cheese for 1.29 Per Slice, Additional Egg 1.99, Sourdough Toast 2.49</p>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#1 Two Eggs</div>
+                            <div class="item-description">with sausage links or bacon, home fries and toast</div>
+                            <div class="item-description">with ham, turkey sausage or bacon, polish sausage  $12.99</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#2 Three Pancakes</div>
+                            <div class="item-description">with two eggs, sausage or bacon</div>
+                            <div class="item-description">with ham, Canadian bacon, Polish sausage or turkey sausage                     -       $14.99 </div>
+                        </div>
+                        <div class="item-price">$13.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#3 6OZ. Steak</div>
+                            <div class="item-description">with two eggs, home fries and toast</div>
+                        </div>
+                        <div class="item-price">$13.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#4 Three Large Slices of French Toast</div>
+                            <div class="item-description">with sausage or bacon</div>
+                            <div class="item-description">with ham, Canadian bacon, Polish sausage or turkey sausage  -  $13.99 </div>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#5 Two Eggs</div>
+                            <div class="item-description">with home fries and toast</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#6 Soulvaki Breakfast</div>
+                            <div class="item-description">your choice of marinated beef, pork, chicken or gyro with two eggs, homefries and toast or pita</div>
+                        </div>
+                        <div class="item-price">$15.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#7 waffle</div>
+                            <div class="item-description">with powdered sugar </div>
+                            <div class="item-description">with strawberries or blueberries $10.99 </div>
+                            <div class="item-description">(Served until 2:00 PM Only)</div>
+                        </div>
+                        <div class="item-price">$9.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#8 Eggs Benedict</div>
+                            <div class="item-description">with 2 eggs and Canadian bacon served on an English muffin with sauce and homefries</div>
+                            <div class="item-description">(Served until 2:00 PM Only)</div>
+                        </div>
+                        <div class="item-price">$13.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#09 Corned Beef Hash</div>
+                            <div class="item-description">with two eggs and toast</div>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#10 Died Ham Scramble</div>
+                            <div class="item-description">Served with home fries and toast</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#11 Diced Polish Sausage Scramble</div>
+                            <div class="item-description">with onions & peppers. Served with home fries and toast</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#12 Two + Two + Two French Toast</div>
+                            <div class="item-description">with 2 eggs, 2 pancakes, and 2 pieces of bacon or sausage links</div>
+                            <div class="item-description"> Add blueberries or chocolate chips $1.69</div>
+                        </div>
+                        <div class="item-price">$13.09</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">#13 Two + Two + Two French Toast</div>
+                            <div class="item-description">with 2 eggs, 2 french toast, and 2 pieces of bacon or sausage links</div>
+                            <div class="item-description"> Add blueberries or chocolate chips $1.69</div>
+                        </div>
+                        <div class="item-price">$13.09</div>
+                    </div>
+                    
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+
+                <div class="menu-section">
+                    <h3>Omelettes</h3>
+                    <p class="section-note">All omelettes made with three eggs and served with toast and home fries / substitute egg beaters or egg whites for $2.69 / additional egg $1.99 / additional cheese $1.99 / additional vegetables $0.99 / add onion to home fries $0.79 / additional Canadian bacon or Polish sausage $2.99 / additional ham, bacon or sausage $2.79</p>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Cheese Omelette</div>
+                            <div class="item-description">Your choice of American, Swiss, or Cheddar</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name"> Four Cheese Omelette</div>
+                            <div class="item-description"> American, Swiss, Mozzarella and Feta</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Greek Omelette</div>
+                            <div class="item-description">with Feta</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Western Omelette</div>
+                            <div class="item-description">Green peppers, ham and onion</div>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Spinach & Feta Omelette</div>
+                            <div class="item-description">Sauteed spinach, mushrooms & feta</div>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Ham, Bacon or Sausage Omelette</div>
+                            <div class="item-description">Your choice of Ham, Bacon, or Sausage</div>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Philly Steak Omelette</div>
+                            <div class="item-description">Philly meat, green peppers, onion, mozzarella</div>
+                        </div>
+                        <div class="item-price">$13.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chilli & Cheese Omelette</div>
+                            <div class="item-description">Your choice of American, Swiss, or Cheddar</div>
+                        </div>
+                        <div class="item-price">$13.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Country Club Omelette</div>
+                            <div class="item-description">Chopped turkey, bacon, tomato and swiss cheese smothered in cheese sauce </div>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chicken Souvlaki Omelette</div>
+                            <div class="item-description">Marinated chicken tenders, and feta</div>
+                        </div>
+                        <div class="item-price">$15.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Vegetable Omelette</div>
+                            <div class="item-description">Mushrooms, onions, tomatoes, green peppers, spinach, broccoli</div>
+                        </div>
+                        <div class="item-price">$12.99</div>        
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Texas Hot Omelette</div>
+                            <div class="item-description">Hot dog, onions, Texas sauce and cheese</div>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Sicilian Omelette</div>
+                            <div class="item-description">Italian sausage, roasted red peppers, onions, mozzarella</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Gyro Omelette</div>
+                            <div class="item-description">with feta</div>
+                        </div>
+                        <div class="item-price">$15.99</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+
+                <div class="menu-section">
+                    <h3>Breakfast Side Orders</h3>
+                    
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Pancakes</div>
+                            <div class="item-description">Full Stack-3 pieces</div>
+                        </div>
+                        <div class="item-price">$11.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Pancakes</div>
+                            <div class="item-description">Short Stack-2 pieces</div>
+                        </div>
+                        <div class="item-price">$10.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chocolate Chip Pancakes</div>
+                            <div class="item-description">Full Stack-3 pieces</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chocolate Chip Pancakes</div>
+                            <div class="item-description">Short Stack-2 pieces</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Blueberry Pancakes</div>
+                            <div class="item-description">Full Stack-3 pieces</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Blueberry Pancakes</div>
+                            <div class="item-description">Short Stack-2 pieces</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">French Toast - Short stack(2) / Full Stack(3 pieces)</div>
+                            <div class="item-description"> Short stack(2) / Full Stack(3 pieces)</div>
+                        </div>
+                        <div class="item-price">$10.99 / $11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">French Toast</div>
+                            <div class="item-description">Short Stack-2 pieces</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Oatmeal</div>
+                        <div class="item-price">$6.69</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Egg & Toast</div>
+                            <div class="item-description">One egg</div>
+                        </div>
+                        <div class="item-price">$6.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Egg & Toast</div>
+                            <div class="item-description">Two eggs</div>
+                        </div>
+                        <div class="item-price">$7.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Side of Corned Beef Hash</div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">4 Strips of Bacon or 4 Sausage Links</div>
+                        <div class="item-price">$6.89</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Breakfast Meat</div>
+                            <div class="item-description">Ham, Turkey Sausage, Polish sausage, or Canadian Bacon</div>
+                        </div>
+                        <div class="item-price">$7.89</div>
+                        
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Toast</div>
+                            <div class="item-description">White, Wheat, or Rye</div>
+                        </div>
+                        <div class="item-price">$2.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Cinnamon Toast</div>
+                        <div class="item-price">$2.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Sour Dough Bread, Pita or Dinner Bread</div>
+                        <div class="item-price">$3.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">English Muffin</div>
+                        <div class="item-price">$2.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Bagle</div>
+                            <div class="item-description">Bagle with cream cheese - $3.99</div>
+                        </div>
+                        <div class="item-price">$3.69</div>
+                        
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Cold cereal</div>
+                        <div class="item-price">$4.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Home Fries - Small / Large</div>
+                        <div class="item-price">$3.99 / $4.99</div>
+                    </div>
+                    
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Souvlaki - Small / Large </div>
+                            <div class="item-description">choice of chicken, beef, pork or gyro</div>
+                        </div>
+                        <div class="item-price">$11.99 / $13.99</div>
+                    </div>
+                    
+                    
+
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+
+        <!-- SANDWICHES -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('sandwiches')">
+                <span> Sandwiches</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="sandwiches" class="accordion-content">
+                <div class="menu-section">
+                    <h3>Charbroiled Sandwiches</h3>
+                    <p class="section-note">Add a potato 3.99 / Add bacon 1.99</p>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Greek Burger</div>
+                            <div class="item-description">Served on hard roll with lettuce, tomato, feta, pepperoncini, pickle and olives</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Hamburger</div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Cheese Burger</div>
+                            <div class="item-description"> 1/4lb Served on sesame roll with lettuce, tomato, onion and pickle </div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Sahlen's Hot Dog</div>
+                        <div class="item-price">$4.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Sahlen's Texas Hot</div>
+                            <div class="item-description">Homemade Texas sauce, mustard and onion</div>
+                        </div>
+                        <div class="item-price">$4.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chopped Sirloin</div>
+                            <div class="item-description">Served on hard roll with fried onions</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Grilled Chicken Breast</div>
+                            <div class="item-description">Served on hard roll with lettuce, tomato, and mayo</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Italian Sausage</div>
+                            <div class="item-description">Served on hard roll with fried onions and peppers</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Turkey Burger</div>
+                            <div class="item-description">Served on sesame roll with lettuce, tomato,pickle and onion</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Veggie Burger</div>
+                            <div class="item-description">Served on hard roll with lettuce, tomato, onion, pepperoncini, pickle and olives</div>
+                        </div>
+                        <div class="item-price">$10.99</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+
+                <div class="menu-section">
+                    <h3>Sandwiches</h3>
+                    <p class="section-note">substitute pita or bagel on any sandwich for $1.49 extra / Add tomato $0.99 / Add Cheese $2.89 per slice / Add side of chips $2.49 / Add a potato $3.99</p>
+                    <div class="menu-item">
+                        <div class="item-name">Fried Egg Sandwich / with cheese</div>
+                        <div class="item-price">$4.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Fried Egg Sandwich / with cheese / with bacon or sausage</div>
+                        <div class="item-price">$5.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Fried Egg Sandwich / with cheese / with canadian bacon or sausage</div>
+                        <div class="item-price">$6.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Egg Salad</div>
+                            <div class="item-description">Mixed with mayo and mustard served on white toast</div>
+                        </div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Tuna Salad</div>
+                            <div class="item-description">Mixed with mayo and celery served on white toast</div>
+                        </div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chicken Salad</div>
+                            <div class="item-description">Mixed with mayo and celery served on white toast</div>
+                        </div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Classic BLT (Bacon, Lettuce, Tomato)</div>
+                            <div class="item-description">served on white toast</div>
+                        </div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Canadian BLT (Canadian Bacon, Lettuce, Tomato)</div>
+                            <div class="item-description">served on white toast</div>
+                        </div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Ham Lettuce & Tomato</div>
+                            <div class="item-description">served with mayo on white toast</div>
+                        </div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Western Sandwich</div>
+                            <div class="item-description">Ham, green peppers and onions mixed with scrambled eggs and served on white toast</div>
+                        </div>
+                        <div class="item-price">$9.99</div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="item-name">Grilled feta in pita</div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Grilled Cheese / Grilled Swiss on Rye</div>
+                        <div class="item-price">$6.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Grilled Cheese with bacon or ham / Grilled Swiss on Rye with bacon or ham</div>
+                        <div class="item-price">$8.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Fried Bologna & Onion served on hard roll</div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name"> Cold Turkey Sandwich or Roast Beef</div>
+                            <div class="item-description">Sliced turkey breast or roast beef with lettuce, tomato on white toast</div>
+                        </div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Sheridan Special</div>
+                            <div class="item-description">Cold corned beef and swiss with mustard served with a pickle.. Served cold or grilled</div>
+                        </div>
+                        <div class="item-price">$10.49</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+
+                <div class="menu-section">
+                    <h3>Club Sandwiches</h3>
+                    <p class="section-note">served on white toast with lettuce, tomato, onion, mayo and chips / Add bacon $1.99 / Add Cheese $1.99/ Add a potato $3.99</p>
+                    <div class="menu-item">
+                        <div class="item-name">Bacon or Ham Club</div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Roast Beef Club</div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Canadian Bacon Club</div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Hamburger Club</div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Tuna Club</div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Turkey & Bacon Club</div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Ruben Club</div>
+                            <div class="item-description">Lean corned beef, sauerkraut, swiss cheese and thousand island dressing on grilled Rye</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+
+                <div class="menu-section">
+                    <h3>Wraps</h3>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Wrap - Chicken, Beef, Pork, Gyro</div>
+                            <div class="item-description">In a pita wrap & served with fries and Choice of chicken, beef, pork or gyro with lettuce, tomato, onion, tzatziki, feta</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- FRYER -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('fryer')">
+                <span>From the Fryer</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="fryer" class="accordion-content">
+                <div class="menu-section">
+                    <h3>Fried Favorites</h3>
+                    <div class="menu-item">
+                        <div class="item-name">Sweet Potato Fries</div>
+                            
+                        <div class="item-price">$6.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Pizza Logs (5)</div>
+                            <div class="item-description">Crispy egg rolls filled with pepperoni and cheese</div>
+                        </div>
+                        <div class="item-price">$10.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Mozzarella Sticks (6)</div>
+                            <div class="item-description">Breaded mozzarella with marinara sauce</div>
+                        </div>
+                        <div class="item-price">$10.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chicken Fingers</div>
+                            <div class="item-description">served with french fries, celery, and blue cheese or with a chef salad. / with curly q's add $0.99</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Combo Basket</div>
+                            <div class="item-description">3 Mozzarella sticks, 2 Pizza Logs, 2 chicken fingers, and french fries or onion rings</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- SIDE ORDERS -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('sides')">
+                <span>Side Orders</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="sides" class="accordion-content">
+                <div class="menu-section">
+                    <h3>À La Carte Sides</h3>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Spinach pie</div>
+                            <div class="item-description">A blend of cooked spinach, spices and imported feta layered on phyllo dough</div>
+                        </div>
+                        <div class="item-price">$7.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Greek Potatoes, Mashed Potatoes, French Fries, Home Fries - Small / Large</div>
+                        <div class="item-price">$3.99 / $4.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Onion Rings or Curly Q Fries</div>
+                        <div class="item-price">$6.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Cottage Cheese</div>
+                        <div class="item-price">$5.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Dish of Fruit</div>
+                        <div class="item-price">$5.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Dish of Peaches</div>
+                        <div class="item-price">$5.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Potato Salad, Coleslaw or Macaroni Salad</div>
+                        <div class="item-price">$4.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Applesauce</div>
+                        <div class="item-price">$3.29</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Vegetable</div>
+                        <div class="item-price">$3.29</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Imported Feta</div>
+                        <div class="item-price">$2.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Texas hot sauce / Chesse sauce / Brown gravy</div>
+                        <div class="item-price">$2.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Benedict Sauce (only until 2pm)</div>
+                        <div class="item-price">$2.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Soup - Cup / Bowl</div>
+                        <div class="item-price">$4.09 / 5.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Rice Pilaf</div>
+                        <div class="item-price">$3.99</div>
+                    </div>
+
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- SALADS -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('salads')">
+                <span>Salads & Cold Plates</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="salads" class="accordion-content">
+                <div class="menu-section">
+                    <h3>Fresh Salads</h3>
+                    <p class="section-note">Choise of Salad dressing: Homemade Greek or buttermilk ranch / French / Italian Thousand Island / Fat free Italian / Fat free ranch. Bluecheese and Tazatziki $0.99 extra. Substitute romaine for $1.99</p>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chef Salad - Small / Large</div>
+                            <div class="item-description">Spring mix and iceberg lettuce with tomatoes</div>
+                        </div>
+                        <div class="item-price">$5.99 / $8.29</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Greek Salad - Small / Large</div>
+                            <div class="item-description">Spring mix and iceberg lettuce, onions, green peppers, tomatoes, Greek olives, pepperoncini and feta</div>
+                        </div>
+                        <div class="item-price">$10.49 / $11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Greek Salad with spinach pie</div>
+                            <div class="item-description">Served with spinach pie</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Crispy Chicken Salad</div>
+                            <div class="item-description">Spring mix and iceberg lettuce with cheddar cheese, bacon, onion, hardboiled eggs, tomato and olives</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Crispy Chicken Salad</div>
+                            <div class="item-description">Spring mix and iceberg lettuce with cheddar cheese, bacon, onion, hardboiled eggs, tomato, olives, grilled chicken</div>
+                        </div>
+                        <div class="item-price">$16.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Mediterranean Salad</div>
+                            <div class="item-description">Spring mix, romaine and iceberg lettuce, feta, roasted red peppers, artichokes hearts, spinach, onion, tomato, olives, and pepperoncini</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Mediterranean Salad with Meat/Veggie</div>
+                            <div class="item-description">Spring mix, romaine and iceberg lettuce, feta, roasted red peppers, artichokes hearts, spinach, onion, tomato, olives, and pepperoncini with choice of chicken, beef, tuna, or a veggie burger</div>
+                        </div>
+                        <div class="item-price">$17.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Ceaser Salad</div>
+                            <div class="item-description">Romaine lettuce, croutons, and parmesan cheese and a bread stick</div>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chicken Ceaser Salad</div>
+                            <div class="item-description">Marinated chicken served on romaine lettuce, croutons, and parmesan cheese and a bread stick</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Julienne Salad</div>
+                            <div class="item-description">Spring mix and iceberg lettuce with tomato then topped with ham, turkey, hardboiled eggs, and American cheese</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Open Chicken Souvlaki</div>
+                            <div class="item-description">Chicken, shredded lettuce, onion, tomato, feta and a pickle served with a grilled Pita</div>
+                        </div>
+                        <div class="item-price">$15.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Open Beef Souvlaki</div>
+                            <div class="item-description">Beef, shredded lettuce, onion, tomato, feta and a pickle served with a grilled Pita</div>
+                        </div>
+                        <div class="item-price">$16.29</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Open Pork Souvlaki</div>
+                            <div class="item-description">Pork, shredded lettuce, onion, tomato, feta and a pickle served with a grilled Pita</div>
+                        </div>
+                        <div class="item-price">$16.29</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">50/50 Open Souvlaki</div>
+                            <div class="item-description">Choice of beef, pork or chicken. shredded lettuce, onion, tomato, feta and a pickle served with a grilled Pita</div>
+                        </div>
+                        <div class="item-price">$16.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Open Gyro</div>
+                            <div class="item-description">Marinated ground beef, lamb and pork served on shredded lettuce, onion, tomato, pepperoncini, feta and a pickle served with a grilled Pita</div>
+                        </div>
+                        <div class="item-price">$15.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Open Garden Souvlaki</div>
+                            <div class="item-description">Shredded lettuce, onion, tomato, feta and a pickle served with a grilled Pita</div>
+                        </div>
+                        <div class="item-price">$12.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Open Tuna Souvlaki</div>
+                            <div class="item-description">Tuna, shredded lettuce, onion, tomato, feta and a pickle served with a grilled Pita</div>
+                        </div>
+                        <div class="item-price">$15.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Cottage Cheese & Fruit Plate</div>
+                            <div class="item-description"> served with crackers</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Cottage Cheese, Tuna & Fruit Plate</div>
+                            <div class="item-description"> served with crackers</div>
+                        </div>
+                        <div class="item-price">$13.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Diet Delight</div>
+                            <div class="item-description">Lean sirloin steak or chicken breast on toast with cottage cheese and Fruit</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Design your own cold plate</div>
+                            <div class="item-description"> served with crackers</div>
+                            <div class="item-description"> Choice of One: Tuna salad, egg salad, chicken salad, ham salad or turkey salad</div>
+                            <div class="item-description"> Choice of Two: Potato salad, coleslaw, Macaroni salad, cottage cheese or chef salad</div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- SHERIDAN MELTS -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('melts')">
+                <span>Sheridan Melts</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="melts" class="accordion-content">
+                   
+                <div class="menu-section">
+                    <h3>Grilled to Perfection</h3>
+                    <p class="section-note">Served on rye bread(except Mediterranean melt) substitute sour dough bread for extra $1.29 extra / add a potato $3.99</p>
+                
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Mediterranean Chicken Melt</div>
+                            <div class="item-description">Chicken breast grilled with roasted red peppers, artichoke hearts, spinach, pesto and mozzarella cheese on sourdough bread</div>
+                        </div>
+                        <div class="item-price">$13.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chicken Supreme</div>
+                            <div class="item-description">Chicken breast grilled with three bacon strips, tomato and American cheese</div>
+                        </div>
+                        <div class="item-price">$12.69</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Country Club Melt</div>
+                            <div class="item-description">Sliced turkey, three bacon strips, tomato and swiss cheese</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Patty Melt</div>
+                            <div class="item-description">Ham burger, American cheese and sauteed onions</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Tuna Melt</div>
+                            <div class="item-description">Tuna fish mixed with celey and mayo. Served with American cheese and Tomato</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Turkey Reuben Melt</div>
+                            <div class="item-description">Sliced turkey, swiss cheese, sauerkraut and thousand island dressing</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Sliced Beef or Turkey Melt</div>
+                            <div class="item-description"> served with American cheese</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- HOT SANDWICHES -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('hot-sandwiches')">
+                <span>Hot Sandwiches</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="hot-sandwiches" class="accordion-content">
+                <div class="menu-section">
+                    <h3>Hot & Hearty</h3>
+                    <p class="section-note">Add a potatoes $3.99</p>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Open Steak Sandwich</div>
+                            <div class="item-description">with lettuce, tomato and onion</div>
+                        </div>
+                        <div class="item-price">$13.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Hot Roast Beef Sandwich</div>
+                            <div class="item-description">On white bread or hard roll</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Hot Roast Turkey Sandwich</div>
+                            <div class="item-description">On white bread or hard roll</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Hot Meatloaf Sandwich</div>
+                            <div class="item-description">On white bread or hard roll</div>
+                        </div>
+                        <div class="item-price">$11.99</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- DINNERS -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('dinners')">
+                <span>🍽️ Dinner & Lunch</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="dinners" class="accordion-content">
+                <div class="menu-section">
+                    <h3>Greek Dinners</h3>
+                    <p class="section-note">All dinner served with choice of potatoes</p>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Beef Souvlaki Dinner</div>
+                            <div class="item-description">Marinated beef souvlaki, served with Greek salad and pita</div>
+                        </div>
+                        <div class="item-price">$20.29</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chicken Souvlaki Dinner</div>
+                            <div class="item-description">Marinated chicken souvlaki, served with Greek salad and pita</div>
+                        </div>
+                        <div class="item-price">$19.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">50/50 Souvlaki Dinner</div>
+                            <div class="item-description">Half beef souvlaki and half chicken souvlaki, served with Greek salad and pita</div>
+                        </div>
+                        <div class="item-price">$20.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Pork Souvlaki Dinner</div>
+                            <div class="item-description">Marinated pork souvlaki, served with Greek salad and pita</div>
+                        </div>
+                        <div class="item-price">$19.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Gyro Dinner</div>
+                            <div class="item-description">Marinated ground beef mixed with pork and lamb, served with Greek salad and pita</div>
+                        </div>
+                        <div class="item-price">$19.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Moussaka</div>
+                            <div class="item-description">Layers of eggplant, zucchini, ground beef and grated potatoes, served with Greek salad and pita</div>
+                        </div>
+                        <div class="item-price">$17.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Pastitsio</div>
+                            <div class="item-description">Baked macaroni, ground beef and potatoes, served with Greek salad and pita</div>
+                        </div>
+                        <div class="item-price">$17.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Greek Roast Half Chicken</div>
+                            <div class="item-description">Served with Greek salad and pita</div>
+                        </div>
+                        <div class="item-price">$16.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Greek Combination plate</div>
+                            <div class="item-description">Moussaka, Pastitsio, beef souvlaki and gyro served with Greek potatoes, Greek salad and pita</div>
+                        </div>
+                        <div class="item-price">$20.29</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+
+                <div class="menu-section">
+                    <h3>American Dinners</h3>
+                    <p class="section-note">Served with dinner bread, choice of potatoes, vegetables or Applesauce, and chef salad or soup</p>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chicken, Beef, or 50/50 Stir fry</div>
+                            <div class="item-description">Marinated chicken or beef served over rice with onions, broccoli, green beans, mushrooms and red peppers. (Note: Served with only soup or chef salad)</div>
+                        </div>
+                        <div class="item-price">$16.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Chopped Sirloin Dinner</div>
+                            <div class="item-description">with fried onions</div>
+                        </div>
+                        <div class="item-price">$16.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Liver & Onion / Liver & Onion with bacon</div>
+                            <div class="item-description"></div>
+                        </div>
+                        <div class="item-price">$16.99 / $18.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">8oz. steak with fried shrimp or scallops</div>
+                            <div class="item-description"></div>
+                        </div>
+                        <div class="item-price">$18.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">8oz. sirloin steak</div>
+                            <div class="item-description"></div>
+                        </div>
+                        <div class="item-price">$16.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Veal Cutlet in Tomato Sauce</div>
+                            <div class="item-description"></div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Roast without stuffing Turkey</div>
+                            <div class="item-description"></div>
+                        </div>
+                        <div class="item-price">$16.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Honey dipped fried chicken</div>
+                            <div class="item-description"></div>
+                        </div>
+                        <div class="item-price">$17.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Veal Cutlet in Tomato Sauce</div>
+                            <div class="item-description"></div>
+                        </div>
+                        <div class="item-price">$14.99</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- KIDDIE MENU -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('kiddie')">
+                <span>Kiddie Menu</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="kiddie" class="accordion-content">
+                <div class="menu-section">
+                    <h3>For Our Little Guests</h3>
+                    <p class="section-note"> Limited to children 10 and under. All meals include a small juice, milk or soft drink</p>
+                    <div class="menu-item">
+                        <div class="item-name">Mickey Mouse Pancacke</div>
+                        <div class="item-price">$7.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Mickey Mouse Pancacke</div>
+                            <div class="item-description">served with 2 bacon or 2 sausages</div>
+                        </div>
+                        <div class="item-price">$8.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Large Slice French Toast(1)</div>
+                        <div class="item-price">$6.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Large Slice French Toast(1)</div>
+                            <div class="item-description">served with 2 bacon or 2 sausages</div>
+                        </div>
+                        <div class="item-price">$7.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">1 Egg with 2 Bacon or 2 Sausages</div>
+                            <div class="item-description">served with one slice of toast</div>
+                        </div>
+                        <div class="item-price">$6.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Hot Dog</div>
+                            <div class="item-description">served with french fries</div>
+                        </div>
+                        <div class="item-price">$7.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Ham Burger</div>
+                            <div class="item-description">served with french fries</div>
+                        </div>
+                        <div class="item-price">$8.89</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">CheeseBurger</div>
+                            <div class="item-description">served with french fries</div>
+                        </div>
+                        <div class="item-price">$9.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Open Turkey Sandwich</div>
+                            <div class="item-description">served with french fries</div>
+                        </div>
+                        <div class="item-price">$8.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Open Roast Beef Sandwich</div>
+                            <div class="item-description">served with french fries</div>
+                        </div>
+                        <div class="item-price">$8.09</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Grilled Cheese</div>
+                            <div class="item-description">served with french fries</div>
+                        </div>
+                        <div class="item-price">$7.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Two Chicken Fingers</div>
+                            <div class="item-description">served with french fries</div>
+                        </div>
+                        <div class="item-price">$9.09</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- BEVERAGES -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('beverages')">
+                <span>☕ Beverages</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="beverages" class="accordion-content">
+                <div class="menu-section">
+                    <h3>Drinks</h3>
+                    <div class="menu-item">
+                        <div class="item-name">Coffee</div>
+                        <div class="item-price">$2.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">French Vanilla Cappuccino</div>
+                        <div class="item-price">$3.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Pot of Tea(One Bag/Serving)</div>
+                        <div class="item-price">$3.09</div>
+                    </div>
+                    <div class="menu-item">
+                        
+                        <div>
+                            <div class="item-name">Speciality Tea(One bag / serving)</div>
+                            <div class="item-description">Green Tea, Mint Tea, Earl Grey, English Teatime, Chamomile </div>
+                        </div>
+                        
+                        <div class="item-price">$3.29</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Milk - Small / Large</div>
+                        <div class="item-price">$3.09 / $3.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Chocolate Milk - Small / Large</div>
+                        <div class="item-price">$3.29 / $4.29</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Hot Chocolate</div>
+                        <div class="item-price">$3.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Juices - Small / Large</div>
+                            <div class="item-description">Apple, Cranberry, Grapefruit, Orange, Tomato, V-8</div>
+                        </div>
+                        <div class="item-price">$3.89 / $4.69</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Milkshakes</div>
+                            <div class="item-description">Chocolate, Vanilla, Strawberry</div>
+                        </div>
+                        <div class="item-price">$6.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Unsweetened Iced Tea</div>
+                        <div class="item-price">$3.69</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Soft Drinks </div>
+                            <div class="item-description">Pepsi, Diet Pepsi, Sierra Mist, Dr. Pepper, Ginger Ale, Lipton Iced Tea, Loganberry, Lemonade</div>
+                        </div>
+                        <div class="item-price">$3.50</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+
+        <!-- DESSERTS -->
+        <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion('desserts')">
+                <span>🍰 Desserts</span>
+                <span class="accordion-icon">+</span>
+            </button>
+            <div id="desserts" class="accordion-content">
+                <div class="menu-section">
+                    <h3>Sweet Treats</h3>
+                    <p class="section-note">Add Strawberries, hot fudge or a la mode to any dessert for an additional $1.99</p>
+                    <div class="menu-item">
+                        <div class="item-name">Baklava</div>
+                        <div class="item-price">$5.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Chessecake Baklava</div>
+                        <div class="item-price">$7.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Rice Pudding</div>
+                        <div class="item-price">$5.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Cheesecake</div>
+                        <div class="item-price">$6.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Carrot Cake</div>
+                        <div class="item-price">$6.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Peanut Butter Pie</div>
+                        <div class="item-price">$5.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Chocolate Cake</div>
+                        <div class="item-price">$6.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">2 Scoops of Ice Cream</div>
+                        <div class="item-price">$4.99</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-name">Ice Cream Sundae</div>
+                        <div class="item-price">$6.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Fruit Pie</div>
+                            <div class="item-description">Apple, Cherry, or Blueberry</div>
+                        </div>
+                        <div class="item-price">$5.49</div>
+                    </div>
+                    <div class="menu-item">
+                        <div>
+                            <div class="item-name">Cream Pie</div>
+                            <div class="item-description">Coconut, Chocolate, Banana, Lemon Meringue</div>
+                        </div>
+                        <div class="item-price">$5.49</div>
+                    </div>
+                    <!-- ADD MORE ITEMS HERE -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hours">
+        <h2>Hours of Operation</h2>
+        <div class="hours">
+            <div class="hours-grid">
+                <div class="day-hours">
+                    <strong>Monday - Friday</strong><br>
+                    7:00 AM - 8:00 PM
+                </div>
+                <div class="day-hours">
+                    <strong>Saturday</strong><br>
+                    7:00 AM - 9:00 PM
+                </div>
+                <div class="day-hours">
+                    <strong>Sunday</strong><br>
+                    7:00 AM - 2:00 PM
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Visit Us</h2>
+        <div class="contact-info">
+            <div class="contact-card">
+                <h3>📍 Location</h3>
+                <p>3901 Sheridan Dr<br>
+                Amherst, NY 14226</p>
+            </div>
+            <div class="contact-card">
+                <h3>📞 Phone</h3>
+                <p>(716) 839-3011</p>
+                <p>Call ahead for takeout!</p>
+            </div>
+            <div class="contact-card">
+                <h3>✉️ Email</h3>
+                <p>info@sheridanfamilyrestaurant.com</p>
+            </div>
+        </div>
+        <div class="map-container" style="margin-top: 2rem; height: 450px; background: none; padding: 0;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.99124357628!2d-78.79169612373826!3d42.97845809580903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d373ac4bef4fa7%3A0x4c848814b050e8a3!2sSheridan%20Family%20Restaurant!5e0!3m2!1sen!2sus!4v1769379457298!5m2!1sen!2sus" 
+            width="100%" 
+            height="450" 
+            style="border:0; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+</div>
+    </section>
+    <!-- CUSTOMER REVIEWS SECTION -->
+    <section id="reviews" style="border-radius: 10px; background: linear-gradient(135deg, var(--greek-blue) 0%, var(--greek-light-blue) 100%); padding: 3rem 2rem; text-align: center; color: var(--greek-white);">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="color: var(--greek-white); font-size: 2.5rem; margin-bottom: 1rem;">Love Our Food?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem; color: var(--cream);">
+                We'd love to hear from you! Share your experience with our family.
+            </p>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <!-- Google Review Button -->
+                <a href="https://search.google.com/local/writereview?placeid=ChIJ98vvS6xz04kRo-hQsBS0hEw" 
+                   target="_blank" 
+                   class="review-btn">
+                    <span style="font-size: 1rem;">⭐ Google Review</span><br>
+                   
+                </a>
+            </div>
+            
+            <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.9;">
+                Your feedback helps us serve you better and helps others discover our restaurant!
+            </p>
+        </div>
+    </section>
+    <footer>
+        <h3>Connect With Us</h3>
+        <div class="social-links">
+            <a href="#" title="Facebook">Facebook</a>
+            <a href="#" title="Instagram">Instagram</a>
+            <a href="#" title="Twitter">Twitter</a>
+        </div>
+        <p>&copy; 2026 Sheridan Family Restaurant. All rights reserved. | Serving Since 1989</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
